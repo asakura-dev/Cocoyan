@@ -44,3 +44,12 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'omniauth-twitter'
+gem 'dotenv-rails', :groups => [:development, :test]
+
+gem 'twitter'
+
+gem 'faraday'
+gem 'natto'
+gem 'rest-client'
+gem 'sidekiq'
