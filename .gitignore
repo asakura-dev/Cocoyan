@@ -29,3 +29,5 @@ doc/
 *#
 .#*
 .DS_Store
+
+.env
