@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html{
+  height:100%;
+}
+body{
+  height:100%;
+  min-height:100%;
+  margin:0;
+  padding:0;
+  background:#25ABDC;
+}
+.l-wrapper{
+  max-width:400px;
+  margin:0 auto;
+}
+.select_sns{
+  margin:60px 0 40px 0;
+  color:#fff;
+  text-align:center;
+  img{
+	width:80%;
+	height:auto;
+  }
+}
+.sns_buttons{
+  margin:40px 0;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+
+  box-pack:center;
+  -webkit-box-pack:center;
+  -moz-box-pack:center;
+}
+.sns_button{
+  width:84px;
+  height:84px;
+  border-radius:50%;
+  border:1px solid #fff;
+  margin:0 10px;
+  .inner{
+	margin:8px;
+	width:66px;
+	height:66px;
+	border-radius:50%;
+	border:1px solid #fff;
+	background:rgba(255,255,255, 0.2);
+	text-align:center;
+	a{
+	  display:block;
+	  height:66px;
+	  width:66px;
+	  border-radius:50%;
+	  color:#fff;
+	  font-weight:bold;
+	  text-decoration:none;
+	  font-size:35px;
+	  line-height:66px;
+	  img.twitter{
+		margin:8px;
+		width:50px;
+		height:50px;
+	  }
+	}
+  }
+}
+.description{
+  color:#fff;
+  width:80%;
+  margin:20px auto;
+  padding:20px;
+  border:1px solid #fff;
+  border-radius:4px;
+  box-sizing:border-box;
+}

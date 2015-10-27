@@ -1,2 +1,15 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="l-wrapper">
+  <div class="select_sns">
+  	<%= image_tag('select_sns') %>
+  </div>
+  <div class="sns_buttons">
+	<div class="sns_button">
+	  <div class="inner">
+		<%= link_to image_tag('TwitterLogo_white', class: "twitter"), user_omniauth_authorize_path(:twitter) %>
+	  </div>
+	</div>
+  </div>
+  <div class="description">
+	「COCO-YAN」は、SNSなどのトーク内容から自動的で友達が行きたかった場所を抽出し、提案します。
+  </div>
+</div>
