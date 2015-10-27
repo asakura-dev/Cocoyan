@@ -46,4 +46,13 @@ class User < ActiveRecord::Base
   def self.create_unique_email
     User.create_unique_string + "@example.com"
   end
+
+  def client
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['TW_CONS_KEY']
+      config.consumer_secret     = ENV['TW_CONS_SECRET_KEY']
+      config.access_token        = self.oauth_token
+      config.access_token_secret = self.oauth_token_secret
+    end
+  end
 end

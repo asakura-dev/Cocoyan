@@ -28,6 +28,59 @@ body{
   max-width:400px;
   margin:0 auto;
 }
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.l-row{
+  width:100%;
+  box-sizing:border-box;
+  padding:0 5px;
+}
+.l-grid{
+  width:100%;
+  box-sizing:border-box;
+  .place a{
+	display:block;
+	position:absolute;
+	width:100%;
+	height:150px;
+  }
+}
+
+.l-grid-1-2{
+  width:50%;
+  float:left;
+  box-sizing:border-box;
+  .place a{
+	display:block;
+	position:absolute;
+	width:100%;
+	height:150px;
+  }
+}
+
+.place{
+  position:relative;
+  margin:5px;
+  height:150px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.5);
+  box-sizing:border-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow:hidden;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
 .select_sns{
   margin:60px 0 40px 0;
   color:#fff;
@@ -87,4 +140,237 @@ body{
   border:1px solid #fff;
   border-radius:4px;
   box-sizing:border-box;
+}
+
+.header{
+  width:100%;
+  height:40px;
+  padding:0;
+  box-sizing:border-box;
+  position:relative;
+  .back{
+	width:40px;
+	height:40px;
+	float:left;
+	position:relative;
+	z-index:200;
+	a{
+	  display:block;
+	  width:20px;
+	  height:auto;
+	  padding:10px;
+	  img{
+		height:20px;
+		width:auto;
+	  }
+	}
+  }
+  .title{
+	color:#fff;
+	position:absolute;
+	z-index:100;
+	width:100%;
+	text-align:center;
+	padding:12px 0;
+	font-size:16px;
+	line-height:16px;
+  }
+}
+.control{
+  color:#fff;
+  float:right;
+  padding:10px;
+  position:relative;
+  z-index:200;
+}
+.rect_place{
+  position:relative;
+  margin:10px 10px;
+  height:300px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.5);
+  box-sizing:border-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow:hidden;
+}
+
+.place .title{
+  width:100%;
+  box-sizing:border-box;
+  height:37px;
+  font-size:16px;
+  padding:5px;
+  position:absolute;
+  bottom:0;
+  color:#ffffff;
+  background:rgba(0,0,0,0.3);
+}
+
+.circle_big{
+  position:absolute;
+  bottom:7px;
+  right:7px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:1px solid #fff;
+  margin:0;
+}
+.circle_big .inner{
+  color:#fff;
+  font-size:30px;
+  line-height:48px;
+  margin:5px;
+  width:48x;
+  height:48px;
+  border-radius:50%;
+  border:1px solid #fff;
+  background:rgba(255,255,255, 0.2);
+  text-align:center;
+}
+
+.circle_small{
+  position:absolute;
+  bottom:7px;
+  right:7px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:1px solid #fff;
+  margin:0;
+}
+.circle_small .inner{
+  color:#fff;
+  font-size:20px;
+  line-height:38px;
+  margin:5px;
+  width:38x;
+  height:38px;
+  border-radius:50%;
+  border:1px solid #fff;
+  background:rgba(255,255,255, 0.2);
+  text-align:center;
+}
+
+.info{
+  background:rgba(255,255,255,0.3);
+  text-align:center;
+  margin:10px;
+  padding:2px 0;
+  color:#ffffff;
+  box-sizing:border-box;
+  border-radius:4px;
+}
+.info_box{
+  background:rgba(255,255,255,0.3);
+  margin:10px 10px;
+  padding:10px 10px;
+  color:#ffffff;
+  box-sizing:border-box;
+  border-radius:4px;
+}
+.info_box a, info_box a:visited{
+  color: #555555;
+  text-decoration:none;
+}
+
+.tw_item{
+  margin:10px;
+  padding:10px;
+  background:rgba(255,255,255,0.2);
+}
+.tw_item img{
+  width:50px;
+  height:50px;
+  float:left;
+  margin:0 10px 0 0;
+}
+.tw_item p{
+  margin:0;
+  padding:0;
+}
+
+.tw_friend{
+  float:left;
+  border:1px solid #fafafa;
+  border-radius:50%;
+}
+.tw_friend .inner{
+  border-radius:50%;
+}
+.tw_friend .inner img{
+  width:auto;
+  height:auto;
+}
+
+
+.friends{
+  margin:14px 0;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+
+  box-pack:center;
+  -webkit-box-pack:center;
+  -moz-box-pack:center;
+}
+.friend{
+  width:84px;
+  height:84px;
+  border-radius:50%;
+  border:1px solid #fff;
+  margin:0 7px;
+}
+.friend .inner{
+  margin:6px;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  border:1px solid #fff;
+  background:rgba(255,255,255, 0.2);
+  text-align:center;
+}
+.friend .inner a{
+  display:block;
+  height:66px;
+  width:66px;
+  border-radius:50%;
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+  font-size:35px;
+  line-height:66px;
+}
+.friend .inner a img{
+  margin:8px;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+}
+
+.tweet{
+  margin:10px 10px 20px 10px;
+  padding:10px;
+  border-radius:10px;
+  background: #2096c1;
+  color:#fff;
+  font-weight:normal;
+  position:relative;
+}
+.tweet:after{
+  top: 100%;
+  left: 20%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #2096c1;
+  border-width: 15px;
+  border-left-width:1px;
+  border-right-width:25px;
+  margin-left: -30px;
 }
