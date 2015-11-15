@@ -10,7 +10,7 @@
 	  <% end %>
 	  <div class="friend">
 		<div class="inner">
-		            <%= link_to image_tag(friend["profile_image_url"]) , "/friend/#{friend['screen_name']}"%>
+		            <%= link_to image_tag(friend["profile_image_url"]) , friend_path(friend.username)%>
 		</div>
 	  </div>
 	  <% if (i % 3) == 2%>

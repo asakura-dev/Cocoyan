@@ -374,3 +374,29 @@ body{
   border-right-width:25px;
   margin-left: -30px;
 }
+
+.analyzing{
+  margin: 60px auto;
+
+  width:202px;
+  height:96px;
+  background:url("popup.png");
+  box-sizing:border-box;
+  color:#fff;
+  font-size:20px;
+  line-height:20px;
+  padding:30px 0;
+  text-align:center;
+}
+.analyzing .charbox{
+  text-align:center;
+  width:65px;
+  margin:0 auto;
+}
+.analyzing .char{
+  display:block;
+  float:left;
+  width:20px;
+  margin:0;
+  padding:0;
+}

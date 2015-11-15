@@ -1,0 +1,29 @@
+<div class="l-wrapper">
+  <div class="analyzing">
+	<div class="charbox clearfix">
+	  <span class="char">解</span>
+	  <span class="char">析</span>
+	  <span class="char">中</span>
+	</div>
+  </div>
+</div>
+<script>
+function jump(){
+	for(var i= 0; i < 3; i++){
+		$(".char").delay(i+200).eq(i).animate({
+			marginTop: "0px",
+		}, 250, "linear").animate({
+			marginTop: "-10px",
+		}, 150, "linear").animate({
+			marginTop: "0px",
+		}, 250, "linear");
+	}
+	setTimeout("jump()",1000);
+}
+$(function(){
+	setTimeout("jump()",1);
+	setTimeout(function(){
+		location.reload();
+	},5000);
+});
+</script>
