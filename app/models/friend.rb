@@ -1,4 +1,5 @@
 class Friend < ActiveRecord::Base
+  has_many :events,  -> { order 'count desc' }
   def to_param
     return username.parameterize
   end

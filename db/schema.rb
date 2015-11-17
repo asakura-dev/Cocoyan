@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115091443) do
+ActiveRecord::Schema.define(version: 20151116170436) do
+
+  create_table "event_dictionaries", force: :cascade do |t|
+    t.string   "text"
+    t.integer  "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.integer  "friend_id"
+    t.string   "event"
+    t.string   "image_url"
+    t.integer  "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "events", ["friend_id"], name: "index_events_on_friend_id"
 
   create_table "friends", force: :cascade do |t|
     t.string   "username",                         null: false
