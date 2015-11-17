@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 20151116170436) do
 
   create_table "events", force: :cascade do |t|
     t.integer  "friend_id"
-    t.string   "event"
+    t.string   "name"
     t.string   "image_url"
     t.integer  "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "events", ["friend_id"], name: "index_events_on_friend_id"
+  add_index "events", ["friend_id", "name"], name: "index_events_on_friend_id_and_name"
 
   create_table "friends", force: :cascade do |t|
     t.string   "username",                         null: false

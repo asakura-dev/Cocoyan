@@ -33,12 +33,12 @@ class FriendsController < ApplicationController
       nm.parse(tweet.full_text){|word|
         if word.feature.split(',')[0] == "名詞" &&
            EventDictionary.where(text: word.surface).first
-          if event = Event.where(friend_id: friend_id, event: word.surface).first
+          if event = Event.where(friend_id: friend_id, name: word.surface).first
             event.increment
             #t = Tweet.new(event_id: event.id, text: tweet.full_text, url: tweet.uri)
             #t.save
           else
-            event = Event.new(friend_id: friend_id, event: word.surface, count: 1)
+            event = Event.new(friend_id: friend_id, name: word.surface, count: 1)
             event.save
             #t = Tweet.new(event_id: event.id, text: tweet.full_text, url: tweet.uri)
             #t.save
@@ -49,7 +49,7 @@ class FriendsController < ApplicationController
     @events = friend.events.take(10)
     @events.each do |event|
       unless event.image_url
-        image_url = flickr_url(search(event.event)["photos"]["photo"][0])
+        image_url = flickr_url(search(event.name)["photos"]["photo"][0])
         event.image_url = image_url
         event.save
       end

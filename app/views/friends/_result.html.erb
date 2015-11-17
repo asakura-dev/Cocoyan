@@ -12,13 +12,13 @@
 		<div class="l-row">
 		  <div class="l-grid">
 			<div class="place" style="background:url(<%= event.image_url%>); background-size:cover">
-			  <div class="title"><%= event.event%></div>
+			  <div class="title"><%= event.name%></div>
 			  <div class="circle_big">
 				<div class="inner">
 				  <%= event.count%>
 				</div>
 			  </div>
-			  <%= link_to "", "/event/#{event.event}?e=#{event.id}"%>
+			  <%= link_to "", "/friends/#{@friend.username}/event/#{event.name}"%>
 			</div>
 		  </div>
 		</div>
@@ -28,13 +28,13 @@
 		<% end %>
 		<div class="l-grid-1-2">
 		  <div class="place"  style="background:url(<%= event.image_url%>); background-size: cover;">
-			<div class="title"><%= event.event%></div>
+			<div class="title"><%= event.name%></div>
 			<div class="circle_small">
 			  <div class="inner">
 				<%= event.count %>
 			  </div>
 			</div>
-			<%= link_to "", "/event/#{event.event}?e=#{event.id}"%>
+			<%= link_to "", "/friends/#{@friend.username}/event/#{event.name}"%>
 		  </div>
 		</div>
 		<% if(i % 2) == 0 && i != 0%>
