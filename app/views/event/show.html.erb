@@ -8,7 +8,7 @@
   </div>
   <div class="main">
 	<div class="info_box">
-	  <a href="https://www.google.co.jp/search?q=<%=@text %>">『<%= @text %>』でGoogle検索</a>
+	  <a href="https://www.google.co.jp/search?q=<%=@text %>"><%= image_tag('cocoyan_search') %>『<%= @text %>』</a>
 	</div>
 	<% @event.tweets.each_with_index do |tweet, i| %>
 	  <div class="tweet">
