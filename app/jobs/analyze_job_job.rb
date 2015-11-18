@@ -1,30 +1,14 @@
 # coding: utf-8
-class FriendsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :friend_of_current_user, :only => [:show]
-  def index
-    ids = current_user.client.friend_ids(current_user.username)
-    @friends = current_user.client.users(ids.take(21))
-  end
-
-  def show
-    @friend = Friend.find(params[:id])
-    
-    if @friend
-      if @friend.status == "analyzed"
-        @events = @friend.events.take(10)
-      end
-    else
-      @friend = Friend.new(username: params[:id])
-      @friend.save
-      AnalyzeJobJob.perform_later(@friend.id,current_user.id)
-    end
-  end
-  private
-  def analyze(friend,current_user)
-    friend_id = friend.id
+class AnalyzeJobJob < ActiveJob::Base
+  queue_as :default
+  def perform(friend_id, current_user_id)
+    friend = Friend.where(id: friend_id).first
+    current_user = User.find(current_user_id)
     nm = Natto::MeCab.new
     tweets = current_user.client.user_timeline(friend.username, {count: 200})
+    puts "====="
+    puts "natto"
+    puts "====="
     tweets.each do |tweet|
       nm.parse(tweet.full_text){|word|
         if word.feature.split(',')[0] == "名詞" &&
@@ -61,8 +45,5 @@ class FriendsController < ApplicationController
   end
   def flickr_url(p)
     "http://farm#{p['farm']}.staticflickr.com/#{p['server']}/#{p['id']}_#{p['secret']}.jpg"
-  end
-  def friend_of_current_user
-    true
   end
 end
