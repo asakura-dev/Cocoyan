@@ -2,7 +2,7 @@ class EventController < ApplicationController
   def show
     @text = params["word"]
     @friend = Friend.find(params["id"])
-    @event = Event.where(["friend_id = ? and name = ?", @friend.id, @text])
+    @event = Event.where(friend_id: @friend.id, name: @text).first
     @photos = []
     search(@text)["photos"]["photo"].each do |photo|
       @photos.push(flickr_url(photo))

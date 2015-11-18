@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116170436) do
+ActiveRecord::Schema.define(version: 20151117135652) do
 
   create_table "event_dictionaries", force: :cascade do |t|
     t.string   "text"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 20151116170436) do
     t.string   "status",     default: "analyzing", null: false
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+  end
+
+  create_table "tweets", force: :cascade do |t|
+    t.integer  "event_id"
+    t.string   "text"
+    t.string   "url"
+    t.time     "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

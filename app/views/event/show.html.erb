@@ -10,7 +10,11 @@
 	<div class="info_box">
 	  <a href="https://www.google.co.jp/search?q=<%=@text %>">『<%= @text %>』でGoogle検索</a>
 	</div>
-	
+	<% @event.tweets.each_with_index do |tweet, i| %>
+	  <div class="tweet">
+		<%= tweet.text %><br>
+	  </div>
+	<% end %>
 	<% @photos.take(3).each_with_index do |photo, i| %>
 	  <div class="l-row">
 		<div class="l-grid">
@@ -19,5 +23,6 @@
 		</div>
 	  </div>
 	<% end %>
+	
   </div>
 </div>

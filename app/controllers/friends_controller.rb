@@ -21,10 +21,6 @@ class FriendsController < ApplicationController
     end
   end
   private
-  #TODO
-  def friend_of_current_user
-    true
-  end
   def analyze(friend)
     friend_id = friend.id
     nm = Natto::MeCab.new
@@ -35,13 +31,13 @@ class FriendsController < ApplicationController
            EventDictionary.where(text: word.surface).first
           if event = Event.where(friend_id: friend_id, name: word.surface).first
             event.increment
-            #t = Tweet.new(event_id: event.id, text: tweet.full_text, url: tweet.uri)
-            #t.save
+            t = Tweet.new(event_id: event.id, text: tweet.full_text, url: tweet.uri, time: tweet.created_at)
+            t.save
           else
             event = Event.new(friend_id: friend_id, name: word.surface, count: 1)
             event.save
-            #t = Tweet.new(event_id: event.id, text: tweet.full_text, url: tweet.uri)
-            #t.save
+            t = Tweet.new(event_id: event.id, text: tweet.full_text, url: tweet.uri, time: tweet.created_at)
+            t.save
           end
         end
       }
@@ -65,5 +61,8 @@ class FriendsController < ApplicationController
   end
   def flickr_url(p)
     "http://farm#{p['farm']}.staticflickr.com/#{p['server']}/#{p['id']}_#{p['secret']}.jpg"
+  end
+  def friend_of_current_user
+    true
   end
 end
