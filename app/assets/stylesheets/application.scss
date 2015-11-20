@@ -82,10 +82,10 @@ body{
 
 
 .select_sns{
-  margin:60px 0 0px 0;
+  margin:10px 0 0px 0;
   color:#fff;
   text-align:center;
-  font-size:35px;
+  font-size:25px;
   opacity:0.9;
   img{
 	width:80%;
@@ -93,7 +93,7 @@ body{
   }
 }
 .sns_buttons{
-  margin:40px 0;
+  margin:10px 0 20px 0;
   display: box;
   display: -webkit-box;
   display: -moz-box;
@@ -380,9 +380,20 @@ body{
   border-right-width:25px;
   margin-left: -30px;
 }
-
+.tweet_time{
+  font-size:12px;
+  float:right;
+  line-height:20px;
+}
+.tweet_time a{
+  color:#fff;
+  text-decoration:none;
+}
+.tweet_username{
+  font-size:14px;
+}
 .analyzing{
-  margin: 60px auto;
+  margin: 60px auto 10px auto;
 
   width:202px;
   height:96px;
@@ -406,3 +417,17 @@ body{
   margin:0;
   padding:0;
 }
+.logo{
+  width:300px;
+  margin: 0 auto;
+  display: block;
+}
+.analyzing_logo{
+  width:200px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+
