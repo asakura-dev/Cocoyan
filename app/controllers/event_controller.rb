@@ -4,8 +4,10 @@ class EventController < ApplicationController
     @friend = Friend.find(params["id"])
     @event = Event.where(friend_id: @friend.id, name: @text).first
     @photos = []
+    @photos_url = []
     search(@text)["photos"]["photo"].each do |photo|
-      @photos.push(flickr_url(photo))
+      @photos.push(flickr_source_url(photo))
+      @photos_url.push(flickr_photo_url(photo))
     end
   end
 end
@@ -17,6 +19,9 @@ def search(text)
   JSON.parse(res)
 end
 
-def flickr_url(p)
+def flickr_source_url(p)
   "http://farm#{p['farm']}.staticflickr.com/#{p['server']}/#{p['id']}_#{p['secret']}.jpg"
+end
+def flickr_photo_url(p)
+  "https://www.flickr.com/photos/#{p['owner']}/#{p['id']}"
 end

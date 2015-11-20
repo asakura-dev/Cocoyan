@@ -1,0 +1,60 @@
+<div class="l-wrapper">
+  <div class="header clearfix">
+	<%= image_tag "cocoyan_logo_long", class: "logo"%>
+	<div class="title">このアプリについて</div>
+	<div class="control"></div>
+	<div class="back">
+	  <%= link_to image_tag('back'), root_path%>
+	</div>
+  </div>
+  <h1 class="desc_h">どんなアプリ?</h1>
+  <div class="description2" style="text-align:center;">
+	COCO-YANは「実はここ、行きたかったんでしょ？」を提供できるWebアプリケーションです。<br>
+	Twitterを使用する知りたい特定ユーザーの今までのつぶやきを解析を行い、その人が行きたいと思っていた場所を表示します。<br>
+	それを見ることによってその人に対して行きたいと思う場所へと誘ったりして喜ばせることができます。<br>
+  </div>
+  <h1 class="desc_h">解析の仕組み</h1>
+  <div class="diagram">
+	<%= image_tag "diagram1"%>
+	<%= image_tag "diagram2"%>
+  </div>
+  <div class="description2" style="text-align:center;">
+	世界中の呟きから行きたい対象となる単語のリスト(辞書データ)を作成します。<br>
+	「◯◯に行きたい」「◯◯行きたい」といったつぶやきの◯◯を収集し、辞書データを作成しました。
+  </div>
+  <div class="diagram">
+	<%= image_tag "diagram3"%>
+	<%= image_tag "diagram4"%>
+  </div>
+  <div class="description2" style="text-align:center;">
+	解析対象のユーザの呟きから、辞書データに存在する単語を含むものを抽出します。
+  </div>
+  <h1 class="desc_h">クレジット</h1>
+  <div class="description2" style="text-align:center;">
+	本ソフトウェアは以下のソフトウェアを含んでいます<br>
+	rails<br>
+	sqlite3<br>
+	sass-rails<br>
+	uglifier<br>
+	coffee-rails<br>
+	jquery-rails<br>
+	turbolinks<br>
+	jbuilder<br>
+	sdoc<br>
+	byebug<br>
+	web-console<br>
+	spring<br>
+	devise<br>
+	omniauth-twitter<br>
+	dotenv-rails<br>
+	twitter<br>
+	faraday<br>
+	natto<br>
+	rest-client<br>
+	resque<br>
+	mongo<br>
+	mongoid<br>
+	pg<br>
+	rails_12factor<br>
+  </div>
+</div>

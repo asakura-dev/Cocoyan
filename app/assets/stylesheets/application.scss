@@ -20,13 +20,13 @@ html{
 body{
   height:100%;
   min-height:100%;
-  margin:0;
+  margin:0 0 10px 0;
   padding:0;
   background:#25ABDC;
 }
 .l-wrapper{
   max-width:400px;
-  margin:0 auto;
+  margin:0 auto 20px auto;
 }
 .clearfix:after {
   content: "";
@@ -143,6 +143,29 @@ body{
   border-radius:4px;
   box-sizing:border-box;
 }
+.description2{
+  color:#fff;
+  width:90%;
+  margin:10px auto;
+  padding:10px;
+  border:1px solid #fff;
+  border-radius:4px;
+  box-sizing:border-box;
+}
+.desc_h{
+  margin-top:20px;
+  font-size:20px;
+  color:#fff;
+  text-align:center;
+  font-weight:normal;
+}
+.diagram{
+  img{
+	width:80%;
+	margin:0 auto;
+  }
+  text-align:center;
+}
 
 .header{
   width:100%;
@@ -201,6 +224,11 @@ body{
   background-position: center center;
   background-repeat: no-repeat;
   overflow:hidden;
+  .photo_link{
+	display:block;
+	width:370px;
+	height:300px;
+  }
 }
 
 .place .title{
@@ -433,7 +461,19 @@ body{
   margin: 0 auto;
   display: block;
 }
-
+.footer{
+  margin:0 30px;
+}
+.about_link{
+  padding:0 10px;
+  color: #fff;
+  line-height: 40px;
+  vertical-align: bottom;
+  text-decoration:none;
+}
+.about_link:visited{
+  color:#fff;
+}
 
 
 

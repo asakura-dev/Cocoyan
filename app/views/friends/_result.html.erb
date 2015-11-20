@@ -10,7 +10,7 @@
   <div class="main">
 	<% @events.each_with_index do |event, i| %>
 	  <% if i == 0 %>
-		<div class="l-row">
+		<div class="l-row clearfix">
 		  <div class="l-grid">
 			<div class="place" style="background:url(<%= event.image_url%>); background-size:cover">
 			  <div class="title"><%= event.name%></div>
@@ -25,7 +25,7 @@
 		</div>
 	  <% else %>
 		<% if (i % 2) == 1 %>
-		  <div class="l-row">
+		  <div class="l-row clearfix">
 		<% end %>
 		<div class="l-grid-1-2">
 		  <div class="place"  style="background:url(<%= event.image_url%>); background-size: cover;">
