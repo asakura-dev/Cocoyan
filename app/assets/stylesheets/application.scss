@@ -93,7 +93,7 @@ body{
   }
 }
 .sns_buttons{
-  margin:10px 0 20px 0;
+  margin:10px 0 60px 0;
   display: box;
   display: -webkit-box;
   display: -moz-box;
@@ -146,10 +146,16 @@ body{
 
 .header{
   width:100%;
-  height:40px;
   padding:0;
   box-sizing:border-box;
   position:relative;
+  .logo{
+	width:100%;
+  }
+  hr{
+	width:90%;
+	border-bottom:1px solid #fff;
+  }
   .back{
 	width:40px;
 	height:40px;
