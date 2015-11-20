@@ -462,7 +462,7 @@ body{
   display: block;
 }
 .footer{
-  margin:0 30px;
+  margin:10px 30px 0 30px;
 }
 .about_link{
   padding:0 10px;
@@ -473,6 +473,15 @@ body{
 }
 .about_link:visited{
   color:#fff;
+}
+.logout{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  &:visited{
+	color:#fff;
+  }
 }
 
 
