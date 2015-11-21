@@ -468,7 +468,6 @@ body{
   padding:0 10px;
   color: #fff;
   line-height: 40px;
-  vertical-align: bottom;
   text-decoration:none;
 }
 .about_link:visited{
@@ -484,5 +483,12 @@ body{
   }
 }
 
-
+.tweet_btn{
+  width:40px;
+  background:#1b95e0;
+  color:#fff;
+  text-decoration:none;
+  padding:5px;
+  border-radius:2px;
+}
 
